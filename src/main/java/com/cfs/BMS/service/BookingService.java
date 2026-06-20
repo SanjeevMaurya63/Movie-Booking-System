@@ -76,13 +76,5 @@ public class BookingService {
         return bookingRepository.save(booking);
     }
 
-    public List<Seat> getAvailableSeats(Long showId)
-    {
-        Show show=showService.getShowById(showId);
-        List<Seat> allSeats=seatRepository.findByScreenId(show.getScreen().getId());
-        List<Long> bookingSeatIds=bookingRepository.findBookedSeatIdsByShowId(showId);
-        return allSeats.stream()
-                .filter(seat -> !bookingSeatIds.contains(seat.getId()))
-                .toList();
-    }
+    
 }

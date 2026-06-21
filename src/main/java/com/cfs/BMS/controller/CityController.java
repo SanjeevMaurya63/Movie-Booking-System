@@ -25,6 +25,11 @@ public class CityController {
     {
         return ResponseEntity.ok(cityService.getAllCities());
     }
+    @GetMapping("{id}")
+    public ResponseEntity<City> getAllCities(@PathVariable Long id)
+    {
+        return ResponseEntity.ok(cityService.getCityById(id));
+    }
 
 
 }

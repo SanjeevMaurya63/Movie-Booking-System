@@ -7,10 +7,7 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class BookingRequest {
 
     private Long userId;

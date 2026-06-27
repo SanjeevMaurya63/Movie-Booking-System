@@ -108,10 +108,3 @@ const ShowAPI = {
 };
 
 // ===== BOOKING APIs =====
-const BookingAPI = {
-    create: (data) => apiPost('/bookings', data),
-    getById: (id) => apiGet(`/bookings/${id}`),
-    getByUser: (userId) => apiGet(`/bookings/user/${userId}`),
-    cancel: (id) => apiPut(`/bookings/${id}/cancel`),
-    getAvailableSeats: (showId) => apiGet(`/bookings/show/${showId}/available-seats`)
-};
